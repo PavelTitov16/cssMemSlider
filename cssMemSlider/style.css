@@ -90,3 +90,40 @@ h6 {
 }
 
 /* Обнуление */
+body {
+    background:darkslateblue;
+}
+.slider {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#slider-title {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    color:gold; 
+}
+
+#slider-content {
+    width: 53%;
+    margin: 0 auto;
+}
+
+#slider-content__item {
+    display: flex;
+}
+
+#slider-content__item img {
+    width: 100%;
+    height: auto;
+}
+
+#slider-content__overflow {
+    width: 100%;
+    overflow: hidden;
+}
