@@ -111,20 +111,37 @@ body {
 }
 
 #slider-content {
-    width: 53%;
+    width: 55%;
     margin: 0 auto;
+    border: 10px solid goldenrod;
 }
 
-#slider-content__item {
+.slider-content__item {
     display: flex;
+    width: 100%;
 }
 
-#slider-content__item img {
+.slider-content__item img {
     width: 100%;
-    height: auto;
 }
 
 #slider-content__overflow {
     width: 100%;
     overflow: hidden;
+}
+
+#dot1:checked ~ #slider-content .slider-content__item {
+    margin-left: 0;
+}
+
+#dot2:checked ~ #slider-content .slider-content__item {
+    margin-left: -100%;
+}
+
+#dot3:checked ~ #slider-content .slider-content__item  {
+    margin-left: -200%;
+}
+
+#dot4:checked ~ #slider-content .slider-content__item {
+    margin-left: -300%;
 }
