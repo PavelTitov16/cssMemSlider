@@ -119,6 +119,7 @@ body {
 .slider-content__item {
     display: flex;
     width: 100%;
+    transition: all 0.8s ease-in;
 }
 
 .slider-content__item img {
