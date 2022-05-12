@@ -108,8 +108,7 @@ body {
     background: url(./img/tv1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
-    overflow: hidden;
+    
 }
 
 .slider {
@@ -126,13 +125,14 @@ body {
     line-height: 30px;
     letter-spacing: 0.15em;
     animation: change-color 3s infinite;
-    margin-top: 45px;
+    margin-top: 40px;
+    padding-bottom: 150px;
 }
 
 #slider-content {
     width: 48%;
     margin: 0 auto;
-    margin-top: 280px;
+    padding-top: 280px;
 }
 
 .slider-content__item {
@@ -171,8 +171,27 @@ input {
     display: none;
 }
 
+#controls {
+    margin: 0 auto;
+    width: 48%;
+    display: flex;
+    justify-content: space-between;
+}
+
 #slider-dots {
     margin-top: 20px;
+}
+
+.text {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 0.15em;
+    color:blanchedalmond;
+    transition: all 0.4s ease-in-out;
+    padding-left: 15px;
 }
 
 label {
@@ -192,10 +211,10 @@ label:hover {
     transform: scale(1.2);
 }
 
-#dot1:checked ~ #slider-dots label:nth-child(1),
-#dot2:checked ~ #slider-dots label:nth-child(2),
-#dot3:checked ~ #slider-dots label:nth-child(3),
-#dot4:checked ~ #slider-dots label:nth-child(4) {
+#dot1:checked ~ #controls label:nth-child(1),
+#dot2:checked ~ #controls label:nth-child(2),
+#dot3:checked ~ #controls label:nth-child(3),
+#dot4:checked ~ #controls label:nth-child(4) {
     background: #eec25e;
     opacity: 1;
     transform: scale(1.2);
