@@ -91,7 +91,12 @@ h6 {
 
 /* Обнуление */
 body {
-    background:darkslateblue;
+    background: url(./img/tv1.jpg);
+    background-position: top center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    object-fit: cover;
 }
 
 .slider {
@@ -105,16 +110,16 @@ body {
     font-style: normal;
     font-weight: normal;
     font-size: 30px;
-    line-height: 40px;
+    line-height: 30px;
     letter-spacing: 0.15em;
-    margin: 20px;
+    margin-top: 40px;
     color:gold; 
 }
 
 #slider-content {
-    width: 55%;
+    width: 48%;
     margin: 0 auto;
-    border: 10px solid goldenrod;
+    margin-top: 280px;
 }
 
 .slider-content__item {
@@ -125,6 +130,7 @@ body {
 
 .slider-content__item img {
     width: 100%;
+    border-radius: 15px;
 }
 
 #slider-content__overflow {
@@ -178,4 +184,5 @@ label:hover {
 #dot3:checked ~ #slider-dots label:nth-child(3),
 #dot4:checked ~ #slider-dots label:nth-child(4) {
     background: cyan;
+    transform: scale(1.2);
 }
