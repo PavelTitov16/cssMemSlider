@@ -1,3 +1,16 @@
+@keyframes change-color {
+    0% {
+      color: blanchedalmond;
+    }
+    50% {
+      color: #eec25e;
+    }
+  
+    100% {
+      color: blanchedalmond;
+    }
+}
+  
 /* Обнуление */
 
 * {
@@ -90,13 +103,13 @@ h6 {
 }
 
 /* Обнуление */
+
 body {
     background: url(./img/tv1.jpg);
-    background-position: top center;
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-    object-fit: cover;
+    overflow: hidden;
 }
 
 .slider {
@@ -112,8 +125,8 @@ body {
     font-size: 30px;
     line-height: 30px;
     letter-spacing: 0.15em;
-    margin-top: 40px;
-    color:gold; 
+    animation: change-color 3s infinite;
+    margin-top: 45px;
 }
 
 #slider-content {
@@ -183,6 +196,7 @@ label:hover {
 #dot2:checked ~ #slider-dots label:nth-child(2),
 #dot3:checked ~ #slider-dots label:nth-child(3),
 #dot4:checked ~ #slider-dots label:nth-child(4) {
-    background: cyan;
+    background: #eec25e;
+    opacity: 1;
     transform: scale(1.2);
 }
