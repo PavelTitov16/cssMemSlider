@@ -171,7 +171,7 @@ input {
     display: none;
 }
 
-#controls {
+#slider-controls {
     margin: 0 auto;
     width: 45%;
     display: flex;
@@ -213,11 +213,39 @@ label:hover {
     transform: scale(1.2);
 }
 
-#dot1:checked ~ #controls label:nth-child(1),
-#dot2:checked ~ #controls label:nth-child(2),
-#dot3:checked ~ #controls label:nth-child(3),
-#dot4:checked ~ #controls label:nth-child(4) {
+#dot1:checked ~ #slider-controls label:nth-child(1),
+#dot2:checked ~ #slider-controls label:nth-child(2),
+#dot3:checked ~ #slider-controls label:nth-child(3),
+#dot4:checked ~ #slider-controls label:nth-child(4) {
     background: #eec25e;
     opacity: 1;
     transform: scale(1.2);
+}
+
+#slider-text__overflow {
+    width: 14em;
+    overflow: hidden;
+}
+
+.slider-text {
+    display: flex;
+    gap: 3em;
+    width: 60em;
+    transition: all 0.8s ease-in;
+}
+
+#dot1:checked ~ #slider-controls .slider-text {
+    margin-left: 0;
+}
+
+#dot2:checked ~ #slider-controls .slider-text {
+    margin-left: -16em;
+}
+
+#dot3:checked ~ #slider-controls .slider-text  {
+    margin-left: -28em;
+}
+
+#dot4:checked ~ #slider-controls .slider-text {
+    margin-left: -43em;
 }
