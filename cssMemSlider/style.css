@@ -121,18 +121,17 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 30px;
-    line-height: 30px;
+    font-size: 1.6em;
+    line-height: 1.3em;
     letter-spacing: 0.15em;
     animation: change-color 3s infinite;
-    margin-top: 40px;
-   
+    margin-top: 4vh;
 }
 
 #slider-content {
     width: 45%;
     margin: 0 auto;
-    padding-top: 185px;
+    padding-top: 24.5vh;
 }
 
 .slider-content__item {
@@ -143,7 +142,7 @@ body {
 
 .slider-content__item img {
     width: 100%;
-    border-radius: 15px;
+    border-radius: 1em;
 }
 
 #slider-content__overflow {
@@ -176,25 +175,26 @@ input {
     width: 45%;
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 3vh;
 }
 
 .text {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
-    line-height: 40px;
+    font-size: 1.4em;
+    line-height: 2em;
     letter-spacing: 0.15em;
     color:blanchedalmond;
     transition: all 0.4s ease-in-out;
-    padding-left: 15px;
+    width: 16em;
+   /* opacity: 0;*/
 }
 
 label {
     display: inline-block;
-    margin: 0 1px;
-    padding: 20px 0;
+    margin: 0 0.15em;
+    padding: 1.4em 0;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
 }
@@ -206,17 +206,18 @@ label {
     background:blanchedalmond;
     opacity: 0.7;
     border-radius: 10px;
+    transition: all 0.4s ease-in-out;   
 }
 
-label:hover {
+label:hover #dot{
     opacity: 1;
     transform: scale(1.2);
 }
 
-#dot1:checked ~ #slider-controls label:nth-child(1),
-#dot2:checked ~ #slider-controls label:nth-child(2),
-#dot3:checked ~ #slider-controls label:nth-child(3),
-#dot4:checked ~ #slider-controls label:nth-child(4) {
+#dot1:checked ~ #slider-controls label:nth-child(1) #dot,
+#dot2:checked ~ #slider-controls label:nth-child(2) #dot,
+#dot3:checked ~ #slider-controls label:nth-child(3) #dot,
+#dot4:checked ~ #slider-controls label:nth-child(4) #dot {
     background: #eec25e;
     opacity: 1;
     transform: scale(1.2);
@@ -229,8 +230,7 @@ label:hover {
 
 .slider-text {
     display: flex;
-    gap: 3em;
-    width: 60em;
+    width: 65em;
     transition: all 0.8s ease-in;
 }
 
@@ -239,13 +239,20 @@ label:hover {
 }
 
 #dot2:checked ~ #slider-controls .slider-text {
-    margin-left: -16em;
+    margin-left: -18em;
 }
 
 #dot3:checked ~ #slider-controls .slider-text  {
-    margin-left: -28em;
+    margin-left: -33em;
 }
 
 #dot4:checked ~ #slider-controls .slider-text {
-    margin-left: -43em;
+    margin-left: -49em;
 }
+
+/*#dot1:checked ~ #slider-controls .slider-text > .text, 
+#dot2:checked ~ #slider-controls .slider-text > .text, 
+#dot3:checked ~ #slider-controls .slider-text > .text, 
+#dot4:checked ~ #slider-controls .slider-text > .text {
+    opacity: 1;
+}*/
