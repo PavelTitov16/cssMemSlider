@@ -11,6 +11,24 @@
     }
 }
 
+@keyframes appearance {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.4;
+    }
+    70% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
 /* Обнуление */
 
 * {
@@ -118,7 +136,6 @@ body {
 .slider {
     width: 80%;
     margin: 0 auto;
-    text-align: center;
 }
 
 #slider-title {
@@ -130,6 +147,7 @@ body {
     letter-spacing: 0.15em;
     animation: change-color 3s infinite;
     padding-top: 1.6em;
+    text-align: center;
 }
 
 #slider-content {
@@ -182,19 +200,6 @@ input {
     margin-top: 1em;
 }
 
-.text {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.4em;
-    line-height: 2em;
-    letter-spacing: 0.13em;
-    color:#0F19B5;
-    transition: all 0.4s ease-in-out;
-    width: 16em;
-   /* opacity: 0;*/
-}
-
 label {
     display: inline-block;
     margin: 0 0.15em;
@@ -230,12 +235,26 @@ label:hover #dot{
 #slider-text__overflow {
     width: 14em;
     overflow: hidden;
-}
+    flex-shrink: 0;
+} 
 
 .slider-text {
     display: flex;
-    width: 65em;
+    width: 100%;
     transition: all 0.8s ease-in;
+}
+
+.text {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4em;
+    line-height: 2em;
+    letter-spacing: 0.13em;
+    color: #0F19B5;
+    transition: all 0.4s ease-in-out;
+    width: 100%;
+    flex-shrink: 0;
 }
 
 #dot1:checked ~ #slider-controls .slider-text {
@@ -243,23 +262,24 @@ label:hover #dot{
 }
 
 #dot2:checked ~ #slider-controls .slider-text {
-    margin-left: -18em;
+    margin-left: -100%;
 }
 
 #dot3:checked ~ #slider-controls .slider-text  {
-    margin-left: -33em;
+    margin-left: -200%;
 }
 
 #dot4:checked ~ #slider-controls .slider-text {
-    margin-left: -49em;
+    margin-left: -300%;
 }
 
-/*#dot1:checked ~ #slider-controls .slider-text > .text, 
-#dot2:checked ~ #slider-controls .slider-text > .text, 
-#dot3:checked ~ #slider-controls .slider-text > .text, 
-#dot4:checked ~ #slider-controls .slider-text > .text {
+#dot1:checked ~ #slider-controls .slider-text, 
+#dot2:checked ~ #slider-controls .slider-text, 
+#dot3:checked ~ #slider-controls .slider-text, 
+#dot4:checked ~ #slider-controls .slider-text {
+    animation: appearance 0.5s ease-in-out;
     opacity: 1;
-}*/
+}
 
 /*Media Queries*/
     
@@ -275,12 +295,11 @@ label:hover #dot{
 
     #slider-controls {
         flex-direction: column;
-       justify-content: center;
-       align-items: center;
-    }
-
-    #slider-dots {
-        order: -1;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+        margin: 0 auto;
+        width: 100%;
     }
 
     #dot {
@@ -291,9 +310,17 @@ label:hover #dot{
     .text {
         font-size: 1.2em;
         line-height: 1em;
-        width: 14em;
+        width: 12em;
     }
+
     #slider-text__overflow {
-        width: 8em;
+        width: 12em;
+        order: 2;
+    }
+
+    #slider-content {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 2em;
     }
 } 
