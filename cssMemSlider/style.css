@@ -11,6 +11,18 @@
     }
 }
 
+@keyframes color-change {
+    0% {
+      color: black;
+    }
+    50% {
+      color: #982995
+    }
+  
+    100% {
+      color: black;
+    }
+}
 @keyframes appearance {
     0% {
       opacity: 0;
@@ -141,7 +153,7 @@ body {
 #slider-title {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 1.6em;
     line-height: 1.3em;
     letter-spacing: 0.15em;
@@ -247,11 +259,11 @@ label:hover #dot{
 .text {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 1.4em;
     line-height: 2em;
     letter-spacing: 0.13em;
-    color: #0F19B5;
+    animation: color-change 3s infinite;
     transition: all 0.4s ease-in-out;
     width: 100%;
     flex-shrink: 0;
@@ -283,11 +295,21 @@ label:hover #dot{
 
 /*Media Queries*/
     
-/*@media (min-width: 481px) and (max-width: 1279px) {
-  
-} */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #dot {
+        width: 1.4rem;
+        height: 0.715rem;  
+    }
 
-@media (min-width: 320px) and (max-width: 480px) {
+    .text {
+        font-size: 1.2em;
+        line-height: 1em;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
     #slider-title {
         font-size: 1.3em;
         line-height: 1em;
@@ -303,18 +325,18 @@ label:hover #dot{
     }
 
     #dot {
-        width: 1rem;
-        height: 0.715rem;  
+        width: 2rem;
     }
 
     .text {
         font-size: 1.2em;
         line-height: 1em;
-        width: 12em;
+        width: 100%;
+        text-align: center;
     }
 
     #slider-text__overflow {
-        width: 12em;
+        width: 14em;
         order: 2;
     }
 
