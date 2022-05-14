@@ -1,16 +1,16 @@
 @keyframes change-color {
     0% {
-      color: blanchedalmond;
+      color: #EAF0F5;
     }
     50% {
-      color: #eec25e;
+      color: #FFF700
     }
   
     100% {
-      color: blanchedalmond;
+      color: #EAF0F5;
     }
 }
-  
+
 /* Обнуление */
 
 * {
@@ -105,10 +105,14 @@ h6 {
 /* Обнуление */
 
 body {
-    background: url(./img/tv1.jpg);
-    background-size: cover;
+    /*background: url(./img/tv1.jpg);*/
+    background: url(./img/bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 .slider {
@@ -125,13 +129,13 @@ body {
     line-height: 1.3em;
     letter-spacing: 0.15em;
     animation: change-color 3s infinite;
-    margin-top: 4vh;
+    padding-top: 1.6em;
 }
 
 #slider-content {
-    width: 45%;
+    width: 50%;
     margin: 0 auto;
-    padding-top: 24.5vh;
+    margin-top: 2em;
 }
 
 .slider-content__item {
@@ -142,7 +146,7 @@ body {
 
 .slider-content__item img {
     width: 100%;
-    border-radius: 1em;
+    border-radius: 1.5em;
 }
 
 #slider-content__overflow {
@@ -172,10 +176,10 @@ input {
 
 #slider-controls {
     margin: 0 auto;
-    width: 45%;
+    width: 50%;
     display: flex;
     justify-content: space-between;
-    margin-top: 3vh;
+    margin-top: 1em;
 }
 
 .text {
@@ -184,8 +188,8 @@ input {
     font-weight: normal;
     font-size: 1.4em;
     line-height: 2em;
-    letter-spacing: 0.15em;
-    color:blanchedalmond;
+    letter-spacing: 0.13em;
+    color:#0F19B5;
     transition: all 0.4s ease-in-out;
     width: 16em;
    /* opacity: 0;*/
@@ -201,11 +205,11 @@ label {
 
 #dot {
     display: block;
-    width: 40px;
-    height:10px;
+    width: 2.86rem;
+    height: 0.715rem;
     background:blanchedalmond;
     opacity: 0.7;
-    border-radius: 10px;
+    border-radius: 0.715rem;
     transition: all 0.4s ease-in-out;   
 }
 
@@ -218,7 +222,7 @@ label:hover #dot{
 #dot2:checked ~ #slider-controls label:nth-child(2) #dot,
 #dot3:checked ~ #slider-controls label:nth-child(3) #dot,
 #dot4:checked ~ #slider-controls label:nth-child(4) #dot {
-    background: #eec25e;
+    background: #0EB927;
     opacity: 1;
     transform: scale(1.2);
 }
@@ -256,3 +260,40 @@ label:hover #dot{
 #dot4:checked ~ #slider-controls .slider-text > .text {
     opacity: 1;
 }*/
+
+/*Media Queries*/
+    
+/*@media (min-width: 481px) and (max-width: 1279px) {
+  
+} */
+
+@media (min-width: 320px) and (max-width: 480px) {
+    #slider-title {
+        font-size: 1.3em;
+        line-height: 1em;
+    }
+
+    #slider-controls {
+        flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    }
+
+    #slider-dots {
+        order: -1;
+    }
+
+    #dot {
+        width: 1rem;
+        height: 0.715rem;  
+    }
+
+    .text {
+        font-size: 1.2em;
+        line-height: 1em;
+        width: 14em;
+    }
+    #slider-text__overflow {
+        width: 8em;
+    }
+} 
