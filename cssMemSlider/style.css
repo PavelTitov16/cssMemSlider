@@ -13,16 +13,17 @@
 
 @keyframes color-change {
     0% {
-      color: black;
+      color: #3b2a9c
     }
     50% {
-      color: #982995
+      color: #2bad61
     }
   
     100% {
-      color: black;
+      color: #3b2a9c
     }
 }
+
 @keyframes appearance {
     0% {
       opacity: 0;
@@ -31,15 +32,15 @@
       opacity: 0;
     }
     50% {
-      opacity: 0.4;
+      opacity: 0;
     }
     70% {
-      opacity: 0.7;
+      opacity: 0;
     }
     100% {
       opacity: 1;
     }
-  }
+}
 
 /* Обнуление */
 
@@ -254,6 +255,7 @@ label:hover #dot{
     display: flex;
     width: 100%;
     transition: all 0.8s ease-in;
+    text-align: center;
 }
 
 .text {
@@ -263,10 +265,20 @@ label:hover #dot{
     font-size: 1.4em;
     line-height: 2em;
     letter-spacing: 0.13em;
+    background: #EAF0F5;
     animation: color-change 3s infinite;
     transition: all 0.4s ease-in-out;
     width: 100%;
     flex-shrink: 0;
+    opacity: 0;
+}
+
+#dot1:checked ~ #slider-controls .slider-text > .text1, 
+#dot2:checked ~ #slider-controls .slider-text > .text2, 
+#dot3:checked ~ #slider-controls .slider-text > .text3, 
+#dot4:checked ~ #slider-controls .slider-text > .text4 {
+    animation: appearance 1.2s linear;
+    opacity: 1;
 }
 
 #dot1:checked ~ #slider-controls .slider-text {
@@ -283,14 +295,6 @@ label:hover #dot{
 
 #dot4:checked ~ #slider-controls .slider-text {
     margin-left: -300%;
-}
-
-#dot1:checked ~ #slider-controls .slider-text, 
-#dot2:checked ~ #slider-controls .slider-text, 
-#dot3:checked ~ #slider-controls .slider-text, 
-#dot4:checked ~ #slider-controls .slider-text {
-    animation: appearance 0.5s ease-in-out;
-    opacity: 1;
 }
 
 /*Media Queries*/
@@ -330,7 +334,7 @@ label:hover #dot{
 
     .text {
         font-size: 1.2em;
-        line-height: 1em;
+        line-height: 1.1em;
         width: 100%;
         text-align: center;
     }
