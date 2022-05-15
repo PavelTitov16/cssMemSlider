@@ -277,7 +277,7 @@ label:hover #dot{
 #dot2:checked ~ #slider-controls .slider-text > .text2, 
 #dot3:checked ~ #slider-controls .slider-text > .text3, 
 #dot4:checked ~ #slider-controls .slider-text > .text4 {
-    animation: appearance 1.2s linear;
+    animation: appearance 1s linear;
     opacity: 1;
 }
 
@@ -299,7 +299,7 @@ label:hover #dot{
 
 /*Media Queries*/
     
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
     #dot {
         width: 1.4rem;
         height: 0.715rem;  
@@ -313,7 +313,7 @@ label:hover #dot{
     }
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 768px) {
     #slider-title {
         font-size: 1.3em;
         line-height: 1em;
