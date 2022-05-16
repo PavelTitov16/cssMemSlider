@@ -27,18 +27,11 @@
 @keyframes appearance {
     0% {
       opacity: 0;
-    }
-    20% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 0;
-    }
-    70% {
-      opacity: 0;
+      transform: matrix(0.1,0,0,0.1,0,0);
     }
     100% {
       opacity: 1;
+      transform: matrix(1,0,0,1,0,0);
     }
 }
 
@@ -243,6 +236,7 @@ label:hover #dot{
     overflow: hidden;
     flex-shrink: 0;
     align-self: center;
+    border-radius: 0.4rem;
 } 
 
 .slider-text {
@@ -264,13 +258,14 @@ label:hover #dot{
     width: 100%;
     flex-shrink: 0;
     opacity: 0;
+    padding: 0.35rem 0;
 }
 
 #dot1:checked ~ #slider-controls .slider-text > .text1, 
 #dot2:checked ~ #slider-controls .slider-text > .text2, 
 #dot3:checked ~ #slider-controls .slider-text > .text3, 
 #dot4:checked ~ #slider-controls .slider-text > .text4 {
-    animation: appearance 0.5s ease-in-out;
+    animation: appearance 1s;
     opacity: 1;
 }
 
