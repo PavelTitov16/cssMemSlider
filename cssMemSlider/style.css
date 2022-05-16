@@ -50,14 +50,6 @@
     border: 0;
 }
 
-*,
-*:before,
-*:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
 :focus,
 :active {
     outline: none;
@@ -178,6 +170,7 @@ body {
 .slider-content__item img {
     width: 100%;
     border-radius: 1.5em;
+    flex-shrink: 0;
 }
 
 #slider-content__overflow {
@@ -249,12 +242,12 @@ label:hover #dot{
     width: 14em;
     overflow: hidden;
     flex-shrink: 0;
+    align-self: center;
 } 
 
 .slider-text {
     display: flex;
     width: 100%;
-    transition: all 0.8s ease-in;
     text-align: center;
 }
 
@@ -277,7 +270,7 @@ label:hover #dot{
 #dot2:checked ~ #slider-controls .slider-text > .text2, 
 #dot3:checked ~ #slider-controls .slider-text > .text3, 
 #dot4:checked ~ #slider-controls .slider-text > .text4 {
-    animation: appearance 1s linear;
+    animation: appearance 0.5s ease-in-out;
     opacity: 1;
 }
 
